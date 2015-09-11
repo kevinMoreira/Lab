@@ -5,14 +5,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
     class usuario extends Pessoa{
             private $login;
             private $senha;
             private $permicao;
-            
-            function _constuct($login,$senha){
+            private $token;
+            private $venda;
+            private $fornecedor;
+            private $produto;
+              
+            function _constuct($login,$senha,$token){
                 $this-> login=$login;
                 $this->senha= $senha;
+                $this->token=$token;
             } 
             
             function getLogin() {
@@ -40,10 +46,42 @@
             }
 
             
+              function getToken() {
+                return $this->token;
+            }
+
+            function getVenda() {
+                return $this->venda;
+            }
+
+            function setToken($token) {
+                $this->token = $token;
+            }
+
+            function setVenda($venda) {
+                $this->venda = $venda;
+            }
+            
+            function getFornecedor() {
+                return $this->fornecedor;
+            }
+
+            function setFornecedor($fornecedor) {
+                $this->fornecedor = $fornecedor;
+            }
+            
+            
+            function getProduto() {
+                return $this->produto;
+            }
+
+            function setProduto($produto) {
+                $this->produto = $produto;
+            }
             
            function Logar(){
              
-         }   
+           }   
         
     }
     

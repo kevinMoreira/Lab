@@ -7,7 +7,7 @@
  */
 
      class Pessoa{
-        private $nome;
+      private $nome;
         private $cpf;
         private $dataNasc;
         private $telefone;
@@ -20,8 +20,16 @@
         private $bairo;
         private $cidade;
         private $foto;
-        
-        function __construct($nome, $cpf, $dataNasc, $telefone, $celular, $email, $cep, $endereco, $numero, $complemento, $bairo, $cidade, $foto) {
+        private $uf;
+        function getUf() {
+            return $this->uf;
+        }
+
+        function setUf($uf) {
+            $this->uf = $uf;
+        }
+
+        function __construct($nome, $cpf, $dataNasc, $telefone, $celular, $email, $cep, $endereco, $numero, $complemento, $bairo, $cidade, $foto, $uf) {
             $this->nome = $nome;
             $this->cpf = $cpf;
             $this->dataNasc = $dataNasc;
@@ -35,9 +43,11 @@
             $this->bairo = $bairo;
             $this->cidade = $cidade;
             $this->foto = $foto;
+            $this->uf = $uf;
         }
 
-        
+
+                
         function getNome() {
             return $this->nome;
         }
@@ -141,13 +151,6 @@
         function setFoto($foto) {
             $this->foto = $foto;
         }
-
-
-        
-        
-        
-        
-        
-        
+          
     }
 ?>

@@ -3,11 +3,14 @@
 			private $nome;
 			private $valor;
 			private $categoria;
-			
-                        function __construct($nome, $valor, $categoria) {
+			private $fornecedor;
+                  
+
+                         function __construct($nome, $valor, $categoria, $fornecedor) {
                             $this->nome = $nome;
                             $this->valor = $valor;
                             $this->categoria = $categoria;
+                            $this->fornecedor=$fornecedor;
                         }
 
                         function getNome() {
@@ -33,7 +36,14 @@
                         function setCategoria($categoria) {
                             $this->categoria = $categoria;
                         }
+                        
+                        function getFornecedor() {
+                            return $this->fornecedor;
+                        }
 
+                        function setFornecedor($fornecedor) {
+                            $this->fornecedor = $fornecedor;
+                        }
 
 	
 	}
